@@ -48,7 +48,7 @@ class Day extends Component {
   }
 
   getDrawingStyle(marking) {
-    if (!marking) {
+    if (marking.length === 0) {
       return {};
     }
     return marking.reduce((prev, next) => {
@@ -111,7 +111,7 @@ class Day extends Component {
       textStyle.push(this.style.todayText);
     }
 
-    if (this.props.marked) {
+    if (this.props.marked.length > 0) {
       containerStyle.push({
         borderRadius: 17
       });
