@@ -16,7 +16,8 @@ export default function styleConstructor(theme={}) {
       //borderWidth: 1,
       width: 38,
       height: FILLER_HEIGHT,
-      alignItems: 'center'
+      alignItems: 'center',
+      overflow: 'hidden'
     },
     fillers: {
       position: 'absolute',
