@@ -176,8 +176,8 @@ class Day extends Component {
     return (
       <TouchableWithoutFeedback onPress={this.props.onPress}>
         <View style={this.style.wrapper}>
-          {fillers}
           <View style={containerStyle}>
+            {fillers}
             <Text style={textStyle}>{String(this.props.children)}</Text>
           </View>
         </View>
