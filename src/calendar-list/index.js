@@ -161,7 +161,8 @@ class CalendarList extends Component {
         data={this.state.rows}
         //snapToAlignment='start'
         //snapToInterval={calendarHeight}
-        removeClippedSubviews={Platform.OS === 'android' ? false : true}
+        // fix for calendar not rendering until scroll initiated on ios
+        removeClippedSubviews={false}
         pageSize={1}
         onViewableItemsChanged={this.onViewableItemsChanged.bind(this)}
         renderItem={this.renderCalendar.bind(this)}
