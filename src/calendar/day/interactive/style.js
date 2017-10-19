@@ -1,6 +1,8 @@
 import {StyleSheet} from 'react-native';
 import * as defaultStyle from '../../../style';
 
+const STYLESHEET_ID = 'stylesheet.day.interactive';
+
 const FILLER_HEIGHT = 34;
 
 export default function styleConstructor(theme={}) {
@@ -36,7 +38,8 @@ export default function styleConstructor(theme={}) {
     },
     text: {
       marginTop: 7,
-      fontSize: 16,
+      fontSize: appStyle.textDayFontSize,
+      fontFamily: appStyle.textDayFontFamily,
       fontWeight: '300',
       color: appStyle.dayTextColor || '#2d4150',
       backgroundColor: 'rgba(255, 255, 255, 0)'
@@ -66,7 +69,7 @@ export default function styleConstructor(theme={}) {
     },
     naText: {
       color: '#b6c1cd'
-    }
+    },
+    ...(theme[STYLESHEET_ID] || {})
   });
 }
-
